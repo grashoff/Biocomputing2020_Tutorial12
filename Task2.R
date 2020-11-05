@@ -10,12 +10,13 @@ south <- dat2[dat2[,1]=="south", ]
 west <- dat2[dat2[,1]=="west", ]
 
 name <- c("north", "east", "south", "west")
-allmean <- c(mean(north), mean(east), mean(south), mean(west))
+allmean <- c(mean(north[,2]), mean(east[,2]), mean(south[,2]), mean(west[,2]))
 
-means <- data.frame(region = name, mean = numeric(4))
+means <- data.frame(region = name, mean = allmean)
 
+means
 
-ggplot(data = dat2, aes(x = region, y=observations)) +
+ggplot(data = means, aes(x = region, y=mean)) +
   geom_bar(stat= "identity", fill = "red", color = "black") +
   theme_classic()
 
