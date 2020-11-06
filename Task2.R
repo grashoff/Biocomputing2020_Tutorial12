@@ -29,3 +29,6 @@ ggplot(data = dat2,
   xlab("Region") +
   ylab("Observations") +
   theme_classic()
+
+# the first plot shows the mean observation for each region in a barplot
+# the second plot shows all observation points for every region
