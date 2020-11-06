@@ -38,6 +38,7 @@ ggplot(data = dat2,
 # the first plot shows the mean observation for each region in a barplot
 # the second plot shows all observation points for every region
 
+# another method of doing the first barplot that utilizes another library to calculate the mean observations for each region within the ggplot
 ggplot(data = dat2, aes(x = region, y=observations)) +
   stat_summary(fun.data=mean_sdl, geom="bar")
 
