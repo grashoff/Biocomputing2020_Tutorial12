@@ -40,7 +40,9 @@ ggplot(data = dat2,
 
 # another method of doing the first barplot that utilizes another library to calculate the mean observations for each region within the ggplot
 ggplot(data = dat2, aes(x = region, y=observations)) +
-  stat_summary(fun.data=mean_sdl, geom="bar")
+  stat_summary(fun.data=mean_sdl, geom="bar")  +
+    coord_cartesian(
+    ylim = c(14, 15.5))
 
 
 
